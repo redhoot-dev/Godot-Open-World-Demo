@@ -54,7 +54,7 @@ func _input(event):
 
 
 func walk(delta):
-	var direction = get_direction()
+	direction = get_direction()
 	
 	velocity.y += gravity * delta
 	
@@ -69,12 +69,6 @@ func walk(delta):
 	
 	var target = direction * speed
 	
-	var acceleration
-	if direction.dot(temp_velocity) > 0:
-		acceleration = ACCEL
-	else:
-		acceleration = DEACCEL
-	
 	temp_velocity = temp_velocity.linear_interpolate(target, ACCEL * delta)
 	
 	velocity.x = temp_velocity.x
@@ -87,7 +81,7 @@ func walk(delta):
 
 
 func fly(delta):
-	var direction = get_direction()
+	direction = get_direction()
 	
 	var target
 	if Input.is_action_pressed("move_sprint"):

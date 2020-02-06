@@ -23,6 +23,10 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 default_bus_layout=""
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=1280
@@ -139,4 +143,4 @@ quality/reflections/high_quality_ggx=false
 quality/filters/use_nearest_mipmap_filter=true
 quality/subsurface_scattering/quality=0
 environment/default_clear_color=Color( 0.533333, 0.533333, 0.533333, 1 )
-quality/filters/msaa=3
+quality/dynamic_fonts/use_oversampling=false

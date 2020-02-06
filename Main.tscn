@@ -1,14 +1,13 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://CameraRig/CameraRigEnvironment.tres" type="Environment" id=1]
-[ext_resource path="res://AnimationPlayer.gd" type="Script" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://Terrain/TerrainShadowCaster.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://Sky/SkySphere.obj" type="ArrayMesh" id=5]
-[ext_resource path="res://Sky/Skies.png" type="Texture" id=6]
-[ext_resource path="res://Main.gd" type="Script" id=7]
+[ext_resource path="res://Environment/SkySphere.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Environment/Skies.png" type="Texture" id=6]
 [ext_resource path="res://Terrain/Terrain.tscn" type="PackedScene" id=8]
 [ext_resource path="res://CameraRig/CameraRig.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Rain.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Environment/Rain.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type spatial;
@@ -460,25 +459,25 @@ tracks/25/keys = {
 }
 
 [node name="Main" type="Spatial"]
+script = ExtResource( 2 )
 
-[node name="LightRig" type="Spatial" parent="."]
+[node name="Environment" type="Spatial" parent="."]
 transform = Transform( -2427.98, 0, -1762.09, 0, 3000, 0, 1762.09, 0, -2427.98, 0, 0, 0 )
-script = ExtResource( 7 )
 
-[node name="FogCylinder" type="MeshInstance" parent="LightRig"]
+[node name="FogCylinder" type="MeshInstance" parent="Environment"]
 transform = Transform( 0.00642443, 0, 0.232911, 0, 0.08, 0, -0.232911, 0, 0.00642443, 0, 0.032, 0 )
 material_override = SubResource( 2 )
 cast_shadow = 0
 mesh = SubResource( 4 )
 material/0 = null
 
-[node name="SkySphere" type="MeshInstance" parent="LightRig"]
+[node name="SkySphere" type="MeshInstance" parent="Environment"]
 material_override = SubResource( 6 )
 cast_shadow = 0
 mesh = ExtResource( 5 )
 material/0 = null
 
-[node name="Sun" type="DirectionalLight" parent="LightRig"]
+[node name="Sun" type="DirectionalLight" parent="Environment"]
 transform = Transform( 0.000333292, 2.7037e-07, -5.22879e-06, 0, 0.00033289, 1.72129e-05, 5.23577e-06, -1.72109e-05, 0.000332848, 0, 0, 0 )
 light_color = Color( 0.505882, 0.411765, 0.286275, 1 )
 light_energy = 2.26
@@ -493,12 +492,11 @@ directional_shadow_normal_bias = 16.0
 directional_shadow_bias_split_scale = 0.04
 directional_shadow_max_distance = 428.4
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LightRig"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment"]
 autoplay = "TimeOfDay"
 playback_speed = 0.01
 method_call_mode = 1
 anims/TimeOfDay = SubResource( 7 )
-script = ExtResource( 2 )
 
 [node name="CameraRig" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.0548979, 0, -0.998492, 0, 1, 0, 0.998492, 0, -0.0548979, -196.859, 24.857, -29.4514 )

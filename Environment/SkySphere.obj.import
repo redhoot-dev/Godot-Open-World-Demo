@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SkySphere.obj-c9ed0c64a962273f8e389a02dcfe673d.mesh"
+
+[deps]
+
+files=[ "res://.import/SkySphere.obj-c9ed0c64a962273f8e389a02dcfe673d.mesh" ]
+
+source_file="res://Environment/SkySphere.obj"
+dest_files=[ "res://.import/SkySphere.obj-c9ed0c64a962273f8e389a02dcfe673d.mesh", "res://.import/SkySphere.obj-c9ed0c64a962273f8e389a02dcfe673d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

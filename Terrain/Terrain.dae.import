@@ -12,12 +12,12 @@ dest_files=[ "res://.import/Terrain.dae-ec69972e47c8a61f86e54bb2db0e9d8f.scn" ]
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_name="Terrain"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1
-materials/storage=1
+materials/storage=0
 materials/keep_on_reimport=true
 meshes/compress=true
 meshes/ensure_tangents=true
