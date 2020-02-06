@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/TerrainShadowCaster.obj-aa0b172d401c4ac0c542badfeb2aa181.mesh"
+
+[deps]
+
+files=[ "res://.import/TerrainShadowCaster.obj-aa0b172d401c4ac0c542badfeb2aa181.mesh" ]
+
+source_file="res://Terrain/TerrainShadowCaster.obj"
+dest_files=[ "res://.import/TerrainShadowCaster.obj-aa0b172d401c4ac0c542badfeb2aa181.mesh", "res://.import/TerrainShadowCaster.obj-aa0b172d401c4ac0c542badfeb2aa181.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

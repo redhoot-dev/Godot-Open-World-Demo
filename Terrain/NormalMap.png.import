@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/normal1001.png-d1a92db9f69e97ce4b920cfbb77fe942.s3tc.stex"
-path.etc2="res://.import/normal1001.png-d1a92db9f69e97ce4b920cfbb77fe942.etc2.stex"
+path.s3tc="res://.import/NormalMap.png-0cdfa891c5f39bf228f4178ddb1144e9.s3tc.stex"
+path.etc2="res://.import/NormalMap.png-0cdfa891c5f39bf228f4178ddb1144e9.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://v003/normal1001.png"
-dest_files=[ "res://.import/normal1001.png-d1a92db9f69e97ce4b920cfbb77fe942.s3tc.stex", "res://.import/normal1001.png-d1a92db9f69e97ce4b920cfbb77fe942.etc2.stex" ]
+source_file="res://Terrain/NormalMap.png"
+dest_files=[ "res://.import/NormalMap.png-0cdfa891c5f39bf228f4178ddb1144e9.s3tc.stex", "res://.import/NormalMap.png-0cdfa891c5f39bf228f4178ddb1144e9.etc2.stex" ]
 
 [params]
 

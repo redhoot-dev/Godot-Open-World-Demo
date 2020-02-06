@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/colorgrade.png-bf72b4bd4c028c8dec058b4b830f04be.stex"
+path="res://.import/colorgrade.png-7bf3e32ca4b99db72e8f14b6c9e88dd6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://v003/colorgrade.png"
-dest_files=[ "res://.import/colorgrade.png-bf72b4bd4c028c8dec058b4b830f04be.stex" ]
+source_file="res://Terrain/colorgrade.png"
+dest_files=[ "res://.import/colorgrade.png-7bf3e32ca4b99db72e8f14b6c9e88dd6.stex" ]
 
 [params]
 

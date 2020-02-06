@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/terrain_v003.dae-5ca97179f38a5fe0a98d7a561e948ed8.scn"
+path="res://.import/Terrain.dae-ec69972e47c8a61f86e54bb2db0e9d8f.scn"
 
 [deps]
 
-source_file="res://v003/terrain_v003.dae"
-dest_files=[ "res://.import/terrain_v003.dae-5ca97179f38a5fe0a98d7a561e948ed8.scn" ]
+source_file="res://Terrain/Terrain.dae"
+dest_files=[ "res://.import/Terrain.dae-ec69972e47c8a61f86e54bb2db0e9d8f.scn" ]
 
 [params]
 

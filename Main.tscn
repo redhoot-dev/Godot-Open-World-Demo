@@ -2,12 +2,12 @@
 
 [ext_resource path="res://CameraRig/CameraRigEnvironment.tres" type="Environment" id=1]
 [ext_resource path="res://AnimationPlayer.gd" type="Script" id=2]
-[ext_resource path="res://v003/terrain_v004_shadow_.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Terrain/TerrainShadowCaster.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://tube2.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://HOUDINI/skySphere.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://skies/skies_contactsheet_v002_.png" type="Texture" id=6]
-[ext_resource path="res://Spatial.gd" type="Script" id=7]
-[ext_resource path="res://word_v003.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Main.gd" type="Script" id=7]
+[ext_resource path="res://Terrain/Terrain.tscn" type="PackedScene" id=8]
 [ext_resource path="res://CameraRig/CameraRig.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Rain.tscn" type="PackedScene" id=10]
 
@@ -488,12 +488,12 @@ transform = Transform( -0.0548979, 0, -0.998492, 0, 1, 0, 0.998492, 0, -0.054897
 [node name="Rain" parent="CameraRig" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.395, 0 )
 
-[node name="Terrain" parent="." instance=ExtResource( 8 )]
-
 [node name="TerrainShadowCaster" type="MeshInstance" parent="."]
 layers = 0
 mesh = ExtResource( 3 )
 material/0 = null
+
+[node name="Terrain" parent="." instance=ExtResource( 8 )]
 
 [node name="Cameras" type="Spatial" parent="."]
 
