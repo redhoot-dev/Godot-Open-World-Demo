@@ -4,6 +4,9 @@
 
 A small demo testing running large open landscapes in the Godot engine. 
 
+Youtube link:
+https://www.youtube.com/watch?v=zbU65nP23gI
+
 ## License
 The works are licensed under the Creative Commons CC-NC license. (https://creativecommons.org/licenses/by-nc/2.0/) Feel free to use this in any way or form as long as it adheres to the CC-NC non-commercial.
 
