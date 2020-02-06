@@ -54,7 +54,7 @@ func _input(event):
 
 
 func walk(delta):
-	direction = get_direction()
+	var direction = get_direction()
 	
 	velocity.y += gravity * delta
 	
@@ -87,7 +87,7 @@ func walk(delta):
 
 
 func fly(delta):
-	direction = get_direction()
+	var direction = get_direction()
 	
 	var target
 	if Input.is_action_pressed("move_sprint"):
@@ -118,4 +118,4 @@ func get_direction():
 	if Input.is_action_pressed("move_down"):
 			direction -= aim.y * 0.1
 	
-	direction = direction.normalized()
+	return direction.normalized()

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/skies_contactsheet_v002_.png-25382d52c84c42d8e920eb9405882c88.s3tc.stex"
-path.etc2="res://.import/skies_contactsheet_v002_.png-25382d52c84c42d8e920eb9405882c88.etc2.stex"
+path.s3tc="res://.import/Skies.png-29776dd5f3414b8ca8aa65696ee6a6ac.s3tc.stex"
+path.etc2="res://.import/Skies.png-29776dd5f3414b8ca8aa65696ee6a6ac.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://skies/skies_contactsheet_v002_.png"
-dest_files=[ "res://.import/skies_contactsheet_v002_.png-25382d52c84c42d8e920eb9405882c88.s3tc.stex", "res://.import/skies_contactsheet_v002_.png-25382d52c84c42d8e920eb9405882c88.etc2.stex" ]
+source_file="res://Sky/Skies.png"
+dest_files=[ "res://.import/Skies.png-29776dd5f3414b8ca8aa65696ee6a6ac.s3tc.stex", "res://.import/Skies.png-29776dd5f3414b8ca8aa65696ee6a6ac.etc2.stex" ]
 
 [params]
 

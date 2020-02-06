@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://CameraRig/CameraRigEnvironment.tres" type="Environment" id=1]
 [ext_resource path="res://AnimationPlayer.gd" type="Script" id=2]
 [ext_resource path="res://Terrain/TerrainShadowCaster.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://tube2.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://HOUDINI/skySphere.obj" type="ArrayMesh" id=5]
-[ext_resource path="res://skies/skies_contactsheet_v002_.png" type="Texture" id=6]
+[ext_resource path="res://Sky/SkySphere.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Sky/Skies.png" type="Texture" id=6]
 [ext_resource path="res://Main.gd" type="Script" id=7]
 [ext_resource path="res://Terrain/Terrain.tscn" type="PackedScene" id=8]
 [ext_resource path="res://CameraRig/CameraRig.tscn" type="PackedScene" id=9]
@@ -64,7 +63,27 @@ shader_param/uv1_offset = Vector3( 0, 0, 0 )
 shader_param/uv2_scale = Vector3( 1, 1, 1 )
 shader_param/uv2_offset = Vector3( 0, 0, 0 )
 
-[sub_resource type="Shader" id=3]
+[sub_resource type="SpatialMaterial" id=3]
+resource_name = "Default_OBJ"
+albedo_color = Color( 0.8, 0.8, 0.8, 1 )
+metallic = 0.5
+
+[sub_resource type="ArrayMesh" id=4]
+surfaces/0 = {
+"aabb": AABB( -1, -1.21538, -1, 2.00001, 1.71538, 2 ),
+"array_data": PoolByteArray( 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 128, 132, 22, 3, 0, 252, 251, 130, 129, 0, 0, 0, 60, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 129, 129, 0, 0, 0, 0, 208, 179, 93, 63, 0, 0, 0, 191, 0, 0, 0, 191, 150, 24, 65, 0, 191, 7, 148, 129, 85, 59, 0, 60, 208, 179, 93, 63, 0, 0, 0, 63, 0, 0, 0, 191, 147, 0, 63, 0, 193, 0, 147, 129, 85, 59, 0, 0, 208, 179, 93, 63, 0, 0, 0, 191, 0, 0, 0, 191, 150, 24, 65, 0, 67, 5, 107, 127, 85, 59, 0, 60, 208, 179, 93, 63, 0, 0, 0, 63, 0, 0, 0, 191, 147, 0, 63, 0, 63, 0, 109, 127, 85, 59, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 208, 179, 93, 191, 193, 26, 106, 0, 109, 0, 65, 127, 170, 58, 0, 60, 0, 0, 0, 63, 0, 0, 0, 63, 208, 179, 93, 191, 193, 0, 109, 0, 109, 0, 63, 127, 170, 58, 0, 0, 0, 0, 0, 128, 0, 0, 0, 191, 0, 0, 128, 191, 0, 18, 125, 0, 126, 0, 0, 127, 0, 58, 0, 60, 0, 0, 0, 128, 0, 0, 0, 63, 0, 0, 128, 191, 0, 0, 127, 0, 126, 0, 0, 127, 0, 58, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 208, 179, 93, 191, 62, 27, 107, 0, 109, 0, 193, 127, 85, 57, 0, 60, 0, 0, 0, 191, 0, 0, 0, 63, 208, 179, 93, 191, 63, 0, 109, 0, 109, 0, 193, 127, 85, 57, 0, 0, 208, 179, 93, 191, 0, 0, 0, 191, 0, 0, 0, 191, 107, 27, 61, 0, 63, 0, 146, 127, 170, 56, 0, 60, 208, 179, 93, 191, 0, 0, 0, 63, 0, 0, 0, 191, 109, 0, 63, 0, 63, 0, 147, 127, 170, 56, 0, 0, 0, 0, 128, 191, 0, 0, 0, 191, 0, 0, 0, 0, 123, 27, 0, 0, 0, 0, 130, 127, 0, 56, 0, 60, 0, 0, 128, 191, 0, 0, 0, 63, 0, 0, 0, 0, 127, 0, 0, 0, 0, 0, 129, 127, 0, 56, 0, 0, 208, 179, 93, 191, 0, 0, 0, 191, 0, 0, 0, 63, 107, 27, 194, 0, 193, 0, 147, 127, 170, 54, 0, 60, 208, 179, 93, 191, 0, 0, 0, 63, 0, 0, 0, 63, 109, 0, 193, 0, 193, 0, 147, 127, 170, 54, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 208, 179, 93, 63, 65, 20, 150, 0, 148, 0, 190, 127, 85, 53, 0, 60, 0, 0, 0, 191, 0, 0, 0, 63, 208, 179, 93, 63, 63, 0, 147, 0, 147, 0, 193, 127, 85, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 128, 63, 0, 26, 132, 0, 130, 0, 0, 127, 0, 52, 0, 60, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 129, 0, 130, 0, 0, 127, 0, 52, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 208, 179, 93, 63, 192, 24, 150, 0, 148, 0, 66, 127, 85, 49, 0, 60, 0, 0, 0, 63, 0, 0, 0, 63, 208, 179, 93, 63, 193, 0, 147, 0, 147, 0, 63, 127, 85, 49, 0, 0, 225, 179, 93, 63, 0, 0, 0, 191, 0, 0, 0, 63, 149, 25, 194, 0, 193, 0, 109, 127, 85, 45, 0, 60, 225, 179, 93, 63, 0, 0, 0, 63, 0, 0, 0, 63, 147, 0, 193, 0, 193, 0, 109, 127, 85, 45, 0, 0, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 128, 132, 22, 3, 0, 2, 250, 126, 127, 0, 0, 0, 60, 0, 0, 128, 63, 0, 0, 0, 63, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 127, 127, 0, 0, 0, 0, 207, 191, 189, 62, 155, 145, 155, 191, 95, 12, 33, 63, 197, 45, 154, 0, 127, 0, 0, 127, 85, 49, 0, 60, 206, 136, 34, 63, 155, 145, 155, 191, 206, 198, 186, 62, 154, 45, 197, 0, 127, 0, 0, 127, 85, 45, 0, 60, 0, 0, 0, 63, 0, 0, 0, 191, 208, 179, 93, 191, 193, 26, 106, 0, 127, 0, 0, 129, 170, 58, 0, 60, 206, 136, 34, 63, 155, 145, 155, 191, 91, 236, 182, 190, 154, 45, 59, 0, 127, 0, 0, 129, 85, 59, 0, 60, 207, 191, 189, 62, 155, 145, 155, 191, 21, 31, 31, 191, 197, 46, 101, 0, 127, 0, 0, 129, 170, 58, 0, 60, 26, 195, 28, 60, 155, 145, 155, 191, 66, 208, 57, 63, 0, 46, 138, 0, 127, 0, 0, 127, 0, 52, 0, 60, 178, 76, 59, 63, 155, 145, 155, 191, 170, 156, 118, 59, 138, 44, 255, 0, 127, 0, 0, 127, 0, 0, 0, 60, 124, 243, 179, 190, 155, 145, 155, 191, 95, 12, 33, 63, 59, 46, 155, 0, 127, 0, 0, 127, 85, 53, 0, 60, 165, 162, 29, 191, 155, 145, 155, 191, 239, 198, 186, 62, 101, 47, 197, 0, 127, 0, 0, 127, 170, 54, 0, 60, 136, 102, 54, 191, 155, 145, 155, 191, 170, 156, 118, 59, 117, 48, 0, 0, 127, 0, 0, 127, 0, 56, 0, 60, 165, 162, 29, 191, 155, 145, 155, 191, 91, 236, 182, 190, 101, 48, 58, 0, 127, 0, 0, 129, 170, 56, 0, 60, 124, 243, 179, 190, 155, 145, 155, 191, 21, 31, 31, 191, 58, 48, 101, 0, 127, 0, 0, 129, 85, 57, 0, 60, 26, 195, 28, 60, 155, 145, 155, 191, 248, 226, 55, 191, 255, 46, 118, 0, 127, 0, 0, 129, 0, 58, 0, 60, 225, 179, 93, 63, 0, 0, 0, 191, 0, 0, 0, 63, 149, 25, 194, 0, 127, 0, 0, 127, 85, 45, 0, 60 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 6, 0, 7, 0, 8, 0, 8, 0, 7, 0, 9, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 10, 0, 11, 0, 12, 0, 12, 0, 11, 0, 13, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 14, 0, 15, 0, 16, 0, 16, 0, 15, 0, 17, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 18, 0, 19, 0, 20, 0, 20, 0, 19, 0, 21, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0, 22, 0, 23, 0, 24, 0, 24, 0, 23, 0, 25, 0, 24, 0, 25, 0, 26, 0, 26, 0, 25, 0, 27, 0, 22, 0, 24, 0, 28, 0, 28, 0, 24, 0, 29, 0, 2, 0, 30, 0, 31, 0, 31, 0, 6, 0, 32, 0, 20, 0, 22, 0, 33, 0, 33, 0, 22, 0, 28, 0, 0, 0, 2, 0, 34, 0, 34, 0, 2, 0, 31, 0, 18, 0, 20, 0, 35, 0, 35, 0, 20, 0, 33, 0, 16, 0, 18, 0, 36, 0, 36, 0, 18, 0, 35, 0, 14, 0, 16, 0, 37, 0, 37, 0, 16, 0, 36, 0, 12, 0, 14, 0, 38, 0, 38, 0, 14, 0, 37, 0, 10, 0, 12, 0, 39, 0, 39, 0, 12, 0, 38, 0, 8, 0, 10, 0, 40, 0, 40, 0, 10, 0, 39, 0, 41, 0, 0, 0, 29, 0, 29, 0, 0, 0, 34, 0, 6, 0, 8, 0, 32, 0, 32, 0, 8, 0, 40, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 144,
+"material": SubResource( 3 ),
+"name": "Default_OBJ",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 42
+}
+
+[sub_resource type="Shader" id=5]
 code = "shader_type spatial;
 render_mode blend_mix,depth_draw_opaque,cull_disabled,diffuse_burley,specular_schlick_ggx,unshaded,shadows_disabled,ambient_light_disabled;
 uniform vec4 albedo : hint_color;
@@ -107,8 +126,8 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id=4]
-shader = SubResource( 3 )
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
 shader_param/albedo = Color( 1, 1, 1, 1 )
 shader_param/specular = 0.5
 shader_param/metallic = 0.0
@@ -120,11 +139,10 @@ shader_param/uv1_scale = Vector3( 1, 1, 1 )
 shader_param/uv1_offset = Vector3( 0, 0, 0 )
 shader_param/uv2_scale = Vector3( 1, 1, 1 )
 shader_param/uv2_offset = Vector3( 0, 0, 0 )
-shader_param/slice = 3.0
+shader_param/slice = 0.0
 shader_param/texture_albedo = ExtResource( 6 )
 
-[sub_resource type="Animation" id=5]
-resource_name = "TimeOfDay"
+[sub_resource type="Animation" id=7]
 length = 13.0
 loop = true
 step = 1.0
@@ -451,18 +469,18 @@ script = ExtResource( 7 )
 transform = Transform( 0.00642443, 0, 0.232911, 0, 0.08, 0, -0.232911, 0, 0.00642443, 0, 0.032, 0 )
 material_override = SubResource( 2 )
 cast_shadow = 0
-mesh = ExtResource( 4 )
+mesh = SubResource( 4 )
 material/0 = null
 
 [node name="SkySphere" type="MeshInstance" parent="LightRig"]
-material_override = SubResource( 4 )
+material_override = SubResource( 6 )
 cast_shadow = 0
 mesh = ExtResource( 5 )
 material/0 = null
 
 [node name="Sun" type="DirectionalLight" parent="LightRig"]
-transform = Transform( 0.000333292, 1.21339e-06, -5.09324e-06, 0, 0.00032426, 7.72493e-05, 5.23578e-06, -7.72401e-05, 0.000324219, 0, 0, 0 )
-light_color = Color( 0.811765, 0.733333, 0.623529, 1 )
+transform = Transform( 0.000333292, 2.7037e-07, -5.22879e-06, 0, 0.00033289, 1.72129e-05, 5.23577e-06, -1.72109e-05, 0.000332848, 0, 0, 0 )
+light_color = Color( 0.505882, 0.411765, 0.286275, 1 )
 light_energy = 2.26
 light_indirect_energy = 6.8
 light_specular = 0.0
@@ -479,7 +497,7 @@ directional_shadow_max_distance = 428.4
 autoplay = "TimeOfDay"
 playback_speed = 0.01
 method_call_mode = 1
-anims/TimeOfDay = SubResource( 5 )
+anims/TimeOfDay = SubResource( 7 )
 script = ExtResource( 2 )
 
 [node name="CameraRig" parent="." instance=ExtResource( 9 )]

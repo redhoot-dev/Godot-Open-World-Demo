@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Terrain/TerrainShader.tres" type="Material" id=1]
-[ext_resource path="res://v003/terrain_v003.dae" type="PackedScene" id=2]
+[ext_resource path="res://Terrain/TerrainMaterial.tres" type="Material" id=1]
+[ext_resource path="res://Terrain/Terrain.dae" type="PackedScene" id=2]
 
 [node name="Terrain" instance=ExtResource( 2 )]
 
