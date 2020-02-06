@@ -1,3 +1,3 @@
 # Godot-Open-World-Demo
 
-[Screenshots](screenshot.jpg)
+[Screenshots](https://github.com/redhoot-dev/Godot-Open-World-Demo/blob/master/screenshot.jpg)
