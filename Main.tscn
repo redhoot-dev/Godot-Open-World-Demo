@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://camera_Gary.tres" type="Environment" id=1]
+[ext_resource path="res://CameraRig/CameraRigEnvironment.tres" type="Environment" id=1]
 [ext_resource path="res://AnimationPlayer.gd" type="Script" id=2]
 [ext_resource path="res://v003/terrain_v004_shadow_.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://tube2.obj" type="ArrayMesh" id=4]
@@ -8,9 +8,8 @@
 [ext_resource path="res://skies/skies_contactsheet_v002_.png" type="Texture" id=6]
 [ext_resource path="res://Spatial.gd" type="Script" id=7]
 [ext_resource path="res://word_v003.tscn" type="PackedScene" id=8]
-[ext_resource path="res://camera_Gary.tscn" type="PackedScene" id=9]
+[ext_resource path="res://CameraRig/CameraRig.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Rain.tscn" type="PackedScene" id=10]
-
 
 [sub_resource type="Shader" id=1]
 code = "shader_type spatial;
@@ -456,7 +455,6 @@ mesh = ExtResource( 4 )
 material/0 = null
 
 [node name="SkySphere" type="MeshInstance" parent="LightRig"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material_override = SubResource( 4 )
 cast_shadow = 0
 mesh = ExtResource( 5 )
@@ -484,10 +482,10 @@ method_call_mode = 1
 anims/TimeOfDay = SubResource( 5 )
 script = ExtResource( 2 )
 
-[node name="Player" parent="." instance=ExtResource( 9 )]
+[node name="CameraRig" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.0548979, 0, -0.998492, 0, 1, 0, 0.998492, 0, -0.0548979, -196.859, 24.857, -29.4514 )
 
-[node name="Rain" parent="Player" instance=ExtResource( 10 )]
+[node name="Rain" parent="CameraRig" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.395, 0 )
 
 [node name="Terrain" parent="." instance=ExtResource( 8 )]
