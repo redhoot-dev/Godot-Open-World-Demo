@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Terrain"
-run/main_scene="res://Displacement.tscn"
+run/main_scene="res://Main.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 
 [audio]
