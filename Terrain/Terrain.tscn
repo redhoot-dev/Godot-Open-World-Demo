@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Terrain/TerrainMaterial.tres" type="Material" id=1]
+[ext_resource path="res://Terrain/Terrain.dae" type="PackedScene" id=2]
+
+[node name="Terrain" instance=ExtResource( 2 )]
+
+[node name="terrain" parent="." index="0"]
+material_override = ExtResource( 1 )
+cast_shadow = 0
