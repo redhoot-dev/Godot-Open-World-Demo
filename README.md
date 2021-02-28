@@ -8,6 +8,7 @@ Youtube link:
 https://www.youtube.com/watch?v=zbU65nP23gI
 
 ## License
-The works are licensed under the Creative Commons CC-NC license. (https://creativecommons.org/licenses/by-nc/2.0/) Feel free to use this in any way or form as long as it adheres to the CC-NC non-commercial.
+The works are licensed under the Creative Commons CC-BY-V4 as of 28th of Feb 2021.
+https://creativecommons.org/licenses/by/4.0/
 
-A separate license can be arranged for commercial usage. 
+Feel free to use it for whatever you want.
